@@ -155,16 +155,14 @@ function lookUpSong() {
 
 
 function lookUpTweets() {
-  // Search parameters includes my tweets up to last 20 tweets;
-  // Search parameters includes my tweets up to last 20 tweets;
+
   var params = { q: 'CodyCode3', count: 20 };
 
-  // Shows up to last 20 tweets and when created in terminal.
   client.get('search/tweets', params, function (error, tweets, response) {
 
     if (!error) {
 
-      // Loops through tweets and prints out tweet text and creation date.
+   
       for (var i = 0; i < tweets.statuses.length; i++) {
         console.log("______________________________________________________________________________________________________________________________________________________\n")
         var tweetText = tweets.statuses[i].text;
